@@ -10,17 +10,14 @@ function TimerApp() {
   // useEffect runs when running is true
   useEffect(() => {
     let timer;
-
     // if running is true
     if (running) {
       timer = setInterval(() => {
         setSeconds(prev => prev + 1);
       }, 1000); // Each 1 second it will execute
     }
-
     return () => clearInterval(timer);
   }, [running]); // Dependency array – runs when running changes
-
   return (
     <div>
       <h2>Timer Application</h2>

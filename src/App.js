@@ -13,6 +13,7 @@ function App() {
       <button onClick={()=> setCategory("general")}>General</button>
       <button onClick={()=>setCategory("technology")}>Technology</button>
       <button onClick={()=>setCategory("sports")}>Sports</button>
+      <button onClick={()=>setCategory("science")}>Science</button>
       <News category={category}/>
    </div>
   );
