@@ -1,23 +1,19 @@
-import React from 'react';
+import React from "react";
+import "./NewsItem.css";
 
 const NewsItem = ({ title, description, image, url }) => {
   return (
-    <div
-      onClick={() => window.open(url, "_blank")}
-      style={{
-        border: '1px solid gray',
-        padding: '10px',
-        cursor: 'pointer'
-      }}
-    >
+    <div className="news-card" onClick={() => window.open(url, "_blank")}>
       <img
-        src={image || 'https://dummyimage.com/300x180/000/fff'}
+        src={image || "https://dummyimage.com/300x180/000/fff"}
         alt="News"
-        style={{ width: '100%', height: '180px', objectFit: 'cover' }}
       />
 
-      <h4>{title}</h4>
-      <p>{description || 'No description for this news'}</p>
+      <div className="news-content">
+        <h4>{title}</h4>
+        <p>{description || "No description for this news"}</p>
+        <span className="read-more">Read More →</span>
+      </div>
     </div>
   );
 };
